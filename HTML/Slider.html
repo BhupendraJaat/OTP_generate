@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+</head>
+
+ <!-- start style here and we are going to make a slider-bar  -->
+<style>
+
+    .container{
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .outer{
+        width: 100%;
+        column-gap: 100px;
+        height: 60%;
+        background-color: black;
+        /* background-color: rgba(255, 255, 255, 0, 233); */
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        overflow-y: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .outer::-webkit-scrollbar{
+        display: none;
+    }
+
+    .card{
+        flex: 0 0 auto;
+        margin: 0 10px;
+        width: 97%;
+        height: 90%;
+        background: linear-gradient(rgb(255, 0, 149), blue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        color: white;
+        border-radius: 10px;
+        font-weight: 900;
+        scroll-snap-align: center;
+    }
+
+    .card:nth-child(1){
+        margin-left: 80px;
+    }
+</style>
+<body>
+    <!-- here is onle the some code for the slider-bar  -->
+    <!-- this is container -->
+    <div class="container">
+        <!-- this is outer side we will catch it for the set scoller  -->
+        <div class="outer">
+            <!-- these are card of Slider and we can take any type of image for the slider  -->
+            <div class="card">1</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+            <div class="card">4</div>
+            <div class="card">5</div>
+            <div class="card">6</div>
+            <div class="card">7</div>
+            <div class="card">8</div>
+            <div class="card">9</div>
+            <div class="card">10</div>
+        </div>
+    </div>
+</body>
+</html>
